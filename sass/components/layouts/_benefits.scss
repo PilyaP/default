@@ -1,0 +1,52 @@
+
+.benefits
+{
+    
+    @extend .gap;
+    flex-wrap: wrap;
+    &__item
+    {
+        @media screen and (min-width: 768px) {
+
+            flex-basis: calc((100% - 30px) / 2);
+        }
+        @media screen and (min-width: 1200px) {
+            
+            flex-basis: calc((100% - 90px) / 4);
+    
+        }
+
+
+
+    }
+    &__paragraph
+    {
+    
+    @include font(400, null, 1.7142, null);   
+    color: $gray;
+    }
+    &__title
+    {
+        margin-top: 30px;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+
+        @include font(null, 14px, 1.1428, null);
+        text-transform: uppercase;
+    
+        @include toTablet {
+            text-align: center;
+        }
+
+    }
+
+
+    &__icon{
+        
+        height: 120px;
+        background-color: $botton-two;
+        border-radius: 4px;
+        @extend .display;
+        margin-bottom: 30px;
+    }
+}
